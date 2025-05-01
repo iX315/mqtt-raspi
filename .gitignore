@@ -1,0 +1,9 @@
+
+# pixi environments
+.pixi
+*.egg-info
+
+.env*
+
+**/__pycache__/
+src/mqtt_raspi/items/

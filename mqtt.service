@@ -1,0 +1,14 @@
+[Unit]
+Description=Run mqtt script
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+ExecStart=/root/.pixi/bin/pixi run mqtt
+WorkingDirectory=/path/to/your/project
+Restart=on-failure
+StandardInput=tty-force
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
