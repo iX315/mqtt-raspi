@@ -45,9 +45,6 @@ async def main():
     # Connect to the MQTT broker
     mqtt_client.connect(mqtt_settings.host, mqtt_settings.port)
 
-    # Set the callback for the MQTT client
-    #mqtt_client.on_message = neo_callback
-
     update_items = init_items(device_info, mqtt_settings)
 
     # Publish the discovery message
